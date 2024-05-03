@@ -1,0 +1,591 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kovertgreen: '#0ca438',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+</head>
+<body class="bg-blue-50">
+    <header>
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex-1 md:flex md:items-center md:gap-12">
+              <a class="block text-blue-600" href="#">
+                <span class="sr-only">Home</span>
+                Last<b>Phish</b>
+              </a>
+            </div>
+      
+            <div class="md:flex md:items-center md:gap-12">
+              <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                    <!--
+                  <li>
+                    <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a>
+                  </li>
+      
+                  <li>
+                    <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Careers </a>
+                  </li>
+      
+                  <li>
+                    <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a>
+                  </li>
+      
+                  <li>
+                    <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
+                  </li>
+      
+                  <li>
+                    <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
+                  </li>
+      
+                  <li>
+                    <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+                  </li>-->
+                </ul>
+              </nav>
+      
+              <div class="flex items-center gap-4">
+                <div class="sm:flex sm:gap-4">
+                  <div class="hidden sm:flex">
+                    <a
+                      class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-blue-700"
+                      href="#"
+                      onclick="openModal('modelConfirm')"
+                    >
+                      Login
+                    </a>
+                  </div>
+                </div>
+      
+                <div class="block md:hidden">
+                  <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <section>
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+            <div class="mx-auto max-w-xl text-center">
+              <h2 class="prose text-5xl font-bold sm:text-7xl bg-gradient-to-r from-blue-600 via-blue-700 to-blue-500 bg-clip-text text-transparent">Teach your employees how to <span class="italic font-extrabold">catch phish</span></h2>
+              <p class="mt-8 sm:text-xl/relaxed">
+                Automatically send personalized phishing campaigns to your employees.
+              </p>
+              <ul class="py-8">
+                <li class="py-1">
+                  
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-green-700 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                      <span class="">Get started in less than 10 minutes</span>
+                      
+                </li>
+
+                <li class="py-1">
+                    <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-green-700 inline" >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span class="">No allowlisting required, <strong>100% delivery rate</strong></span>
+                </p>
+                  </li>
+
+                  <li class="py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-green-700 inline" >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span class="">Personalized phishing, standardized reporting</span>
+                  </li>
+              </ul>
+      
+              <a href="#"  onclick="openModal('modelConfirm')" class="mt-8 inline-block rounded bg-blue-700 px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 focus:outline-none focus:ring focus:ring-yellow-400">Let's go phishing!</a>
+              <!--<a href="#" class="mt-8 inline-block rounded outline outline-1 outline-black px-12 py-3 text-sm font-medium transition hover:bg-blue-500 hover:text-white focus:outline-none focus:ring focus:ring-yellow-400">See Pricing</a>-->
+            </div>
+        </div>
+      </section>
+
+      <section class="bg-gradient-to-b from-blue-900 to-blue-950 text-white">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-16 lg:px-8 lg:py-32">
+          <div class="mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl font-bold sm:text-4xl">Designing, sending, troubleshooting, reporting, and following up with phishing awareness campaigns is a hassle. <br><br><i>We know, we do it all the time.</i> </h2>
+          </div>
+      
+        </div>
+      </section>
+
+      <!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+
+
+<section>
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <div class="max-w-5xl">
+        <h2 class="text-4xl font-extrabold py-8 sm:text-5xl">
+          Set and forget, <i>we</i> take care of the rest
+        </h2>
+      </div>
+  
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+            <div class="space-y-4">
+                <details class="bg-white rounded-lg group [&_summary::-webkit-details-marker]:hidden" open>
+                  <summary
+                    class="feature-1 flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-blue-900 p-4 text-white"
+                  >
+                    <h2 class="font-medium">1. Connect our platform to your Microsoft tenant</h2>
+              
+                    <span class="relative size-5 shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="absolute inset-0 size-5 opacity-100 group-open:opacity-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="absolute inset-0 size-5 opacity-0 group-open:opacity-100"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 12H9m12 0a9 9 0 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </span>
+                  </summary>
+              
+                  <p class="p-4 leading-relaxed text-gray-700">
+                    LastPhish accesses your organization's data through Microsoft Entra ID. With access to your tenant via the Microsoft Graph API, we can personalize our campaigns, and ensure that all phishes are delivered successfully.
+                  </p>
+                </details>
+              
+                <details class="bg-white rounded-lg group [&_summary::-webkit-details-marker]:hidden">
+                  <summary
+                    class="feature-2 flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-blue-900 p-4 text-white"
+                  >
+                    <h2 class="font-medium">2. We send personalized phishing emails and awareness training</h2>
+              
+                    <span class="relative size-5 shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="absolute inset-0 size-5 opacity-100 group-open:opacity-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="absolute inset-0 size-5 opacity-0 group-open:opacity-100"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 12H9m12 0a9 9 0 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </span>
+                  </summary>
+              
+                  <p class="p-4 leading-relaxed text-gray-700">
+                    Using our extensive experience creating world-class phishing exercises, combined with knowledge about your organization, we create custom campaigns tailored to your employees. This ensures that the learning effects are as good as possible, and leading to lasting positive changes in your organization.
+                  </p>
+                </details>
+
+                <details class="bg-white rounded-lg group [&_summary::-webkit-details-marker]:hidden">
+                  <summary
+                    class="feature-3 flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-blue-900 p-4 text-white"
+                  >
+                    <h2 class="font-medium">3. Get reports and insight into how your employees are doing</h2>
+              
+                    <span class="relative size-5 shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="absolute inset-0 size-5 opacity-100 group-open:opacity-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="absolute inset-0 size-5 opacity-0 group-open:opacity-100"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15 12H9m12 0a9 9 0 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </span>
+                  </summary>
+              
+                  <p class="p-4 leading-relaxed text-gray-700">
+                    We provide a dashboard which gives you insight into the campaigns we've ran, the statistics collected, and the insight you need to further help your employees catch those phishing e-mails!
+                  </p>
+                </details>
+              </div>
+        </div>
+  
+        <div class="lg:py-2">
+          <article id="contentArea" class="text-gray-600">
+            <video class="rounded-xl w-full sm:w-[26rem] sm:-m-2 border bg-base-200" autoplay loop playsinline controls muted width="666" height="666"><source src="feature_1.mp4"></video>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    let elementsArray = document.querySelectorAll("summary");
+    const contentArea = document.querySelector("#contentArea")
+
+    elementsArray.forEach(function(elem) {
+        elem.addEventListener("click", function() {
+            if(elem.className.indexOf("feature-1") == 0){
+                contentArea.innerHTML = '<video class="rounded-xl w-full sm:w-[26rem] sm:-m-2 border bg-base-200" autoplay loop playsinline controls muted width="666" height="666"><source src="feature_1.mp4"></video>'
+            }
+            if(elem.className.indexOf("feature-2") == 0){
+                contentArea.innerHTML = '<img alt="alt text" loading="lazy" width="666" height="666" decoding="async" data-nimg="1" class="rounded-xl w-full sm:w-[26rem] sm:-m-2 border bg-base-200 object-contain object-center" src="feature_2.png" style="color: transparent;">'
+            }
+            if(elem.className.indexOf("feature-3") == 0){
+                contentArea.innerHTML = '<img alt="alt text" loading="lazy" width="666" height="666" decoding="async" data-nimg="1" class="rounded-xl w-full sm:w-[26rem] sm:-m-2 border bg-base-200 object-contain object-center" src="feature_3.png" style="color: transparent;">'
+            }
+        });
+    });
+
+
+    // Fetch all the details element.
+const details = document.querySelectorAll("details");
+
+// Add the onclick listeners.
+details.forEach((detail) => {
+  detail.addEventListener("toggle", () => {
+    if (detail.open) setTargetDetail(detail);
+  });
+});
+
+// Close all the details that are not targetDetail.
+function setTargetDetail(targetDetail) {
+  details.forEach((detail) => {
+    if (detail !== targetDetail) {
+      detail.open = false;
+    }
+  });
+}
+
+
+</script>
+
+
+  <section>
+    <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="relative z-10 lg:py-16">
+          <div class="relative h-64 sm:h-80 lg:h-full">
+            <img
+              alt=""
+              src="team.png"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        </div>
+  
+        <div class="relative flex items-center bg-blue-100">
+          <span
+            class="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-blue-100"
+          ></span>
+  
+          <div class="p-8 sm:p-16 lg:p-24">
+            <h2 class="text-2xl font-bold sm:text-3xl">
+              Created by cyber security professionals
+            </h2>
+  
+            <p class="mt-4 text-gray-700">
+              With years of hands-on experience in conducting phishing campaigns, mastering social engineering tactics, and executing penetration tests, our team brings unparalleled expertise to the table. We deliver solutions tailored to enhance your organization's security posture and awareness against evolving cyber threats.
+            </p>
+  
+            <a href="#"
+              onclick="openModal('modelConfirm')"
+              class="mt-8 inline-block rounded border border-blue-900 bg-blue-900 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+            >
+              Get in Touch
+        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer>
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div
+        class="flex flex-col items-center gap-4 rounded-lg bg-gradient-to-br from-blue-900 to-blue-950 p-6 shadow-lg sm:flex-row sm:justify-between"
+      >
+        <strong class="text-xl text-white sm:text-xl"> Ready to let your employees reel in those phishes? </strong>
+  
+        <a
+          class="inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-indigo-600 hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90"
+          href="#"
+        >
+          <span class="text-sm font-medium" onclick="openModal('modelConfirm')"> Let's go phishing </span>
+  
+          <svg
+            class="size-5 rtl:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </a>
+      </div>
+
+  
+      <div class="mt-16">
+  
+        <div class="mt-16 sm:flex sm:items-center sm:justify-between">
+          <div class="flex justify-center text-blue-700 sm:justify-start">
+            <p>Last<strong>Phish</strong> - a <a href="https://kovert.no">Kovert</a> product</p>
+            
+          </div>
+  
+          <p class="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
+            Copyright &copy; 2024. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modelConfirm" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 ">
+    <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+
+        <div class="flex justify-end p-2">
+            <button onclick="closeModal('modelConfirm')" type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="p-6 pt-0 text-center">
+            <h3 class="text-xl font-normal mt-5 mb-6">We're getting ready to go live. If you would like us to reach out when we do, please fill in the form below!</h3>
+            
+            <p id="my-form-status"></p>
+            <form action="https://formspree.io/f/mzbnoawq" method="POST" id="my-form" class="space-y-4">
+                <div>
+                  <label class="sr-only" for="name">Name</label>
+                  <input
+                    class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    placeholder="Name"
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+
+                <div>
+                    <label class="sr-only" for="email">Email</label>
+                    <input
+                      class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                      placeholder="Email address"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                </div>
+
+                <div>
+                    <label class="sr-only" for="company">Company name</label>
+                    <input
+                      class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                      placeholder="Company name"
+                      type="text"
+                      id="company"
+                      name="company"
+                      required
+                    />
+                  </div>
+
+                <div>
+                    <label class="sr-only" for="employees">Number of employees</label>
+                    <input
+                      class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                      placeholder="Number of employees"
+                      type="number"
+                      id="employees"
+                      name="employees"
+                      required
+                    />
+                </div>
+      
+                <div>
+                  <label class="sr-only" for="message">Message</label>
+      
+                  <textarea
+                    class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    placeholder="Message"
+                    rows="8"
+                    id="message"
+                    name="message"
+                  ></textarea>
+                </div>
+      
+                <div class="mt-4">
+                  <button
+                    type="submit"
+                    class="inline-block w-full rounded-lg bg-blue-900 px-5 py-3 font-medium text-white sm:w-auto"
+                  >
+                    Get notified when we're ready to go phishing!
+                  </button>
+                </div>
+              </form>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.openModal = function(modalId) {
+        document.getElementById(modalId).style.display = 'block'
+        document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+    }
+
+    window.closeModal = function(modalId) {
+        document.getElementById(modalId).style.display = 'none'
+        document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+    }
+
+    // Close all modals when press ESC
+    document.onkeydown = function(event) {
+        event = event || window.event;
+        if (event.keyCode === 27) {
+            document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+            let modals = document.getElementsByClassName('modal');
+            Array.prototype.slice.call(modals).forEach(i => {
+                i.style.display = 'none'
+            })
+        }
+    };
+</script>
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.innerHTML =""
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+</body>
+</html>
